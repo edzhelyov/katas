@@ -1,2 +1,0 @@
-class ObstacleError < StandardError
-end
