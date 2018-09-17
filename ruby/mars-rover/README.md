@@ -1,4 +1,4 @@
-Develop an api that moves a rover around on a grid.
+# Develop an api that moves a rover around on a grid.
 
 Rules:
 
@@ -10,3 +10,11 @@ Rules:
 * The rover receives a char array of commands e.g. RMMLM and returns the finishing point after the moves e.g. 2,1,N
 * The rover wraps around if it reaches the end of the grid.
 * The grid may have obstacles. If a given sequence of commands encounters an obstacle, the rover moves up to the last possible point and reports the obstacle e.g. O,2,2,N
+
+# Solution
+
+Rover implementation is in `lib/rover.rb`
+
+The grid is represented in class in `grid.rb`. The implementation is the same as in `coordinates.rb` but I use two classes since the logic behind them is different. One is representing just a single coordinate from the grid and the other represents the grid size and can be extended with additional logic.
+
+`Position` is representing the current coordinate and which direction the rover is facing. Since there are coordinates I am extending the `Coordinates` class.
