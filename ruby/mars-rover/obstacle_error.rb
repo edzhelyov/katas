@@ -1,0 +1,3 @@
+class ObstacleError < StandardError
+
+end
